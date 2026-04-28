@@ -1,6 +1,6 @@
 {
   "name": "@console-one/scope",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Constraint-propagation kernel over multi-dimensional anchors. Patches walk a trie of latent constraints; merges resolve them with three-valued validity (met / unmet / undetermined) and a preempt-or-hoist protocol. The substrate underneath access control, type checking, gates, and lifecycle.",
   "repository": {
     "type": "git",
