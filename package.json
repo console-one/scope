@@ -1,0 +1,54 @@
+{
+  "name": "@console-one/scope",
+  "version": "0.1.0",
+  "description": "Constraint-propagation kernel over multi-dimensional anchors. Patches walk a trie of latent constraints; merges resolve them with three-valued validity (met / unmet / undetermined) and a preempt-or-hoist protocol. The substrate underneath access control, type checking, gates, and lifecycle.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/console-one/scope.git"
+  },
+  "bugs": {
+    "url": "https://github.com/console-one/scope/issues"
+  },
+  "homepage": "https://github.com/console-one/scope#readme",
+  "keywords": [
+    "constraint",
+    "kernel",
+    "trie",
+    "multi-walk",
+    "anchor",
+    "preempt",
+    "hoist",
+    "access-control",
+    "type-checking"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "smoke": "node dist/smoke.js",
+    "test": "node dist/test-runner.js",
+    "prepublishOnly": "npm run clean && npm run build && npm run test"
+  },
+  "author": "Andrew Chalmers",
+  "license": "MIT",
+  "dependencies": {
+    "@console-one/assessable": "file:../assessable"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.39",
+    "typescript": "^5.9.3"
+  }
+}
